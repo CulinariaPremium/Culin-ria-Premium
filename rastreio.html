@@ -3,147 +3,137 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rastrear Pedido</title>
+    <title>Rastrear Pedido - Culinária Premium</title>
     <link rel="stylesheet" href="style.css">
-    
+    <style>
+        .back-home {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: #ff6347;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            text-align: center;
+            transition: background-color 0.3s ease;
+        }
+
+        .back-home:hover {
+            background-color: #e5533d;
+        }
+
+        /* Reset básico */
+        body, h1, h2, p, form, input, button {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #fef9f5;
+            color: #333;
+        }
+
+        .header {
+            background-color: #f8e3d9;
+            text-align: center;
+            padding: 20px 0;
+            border-bottom: 2px solid #e6c4b4;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            color: #b7352b;
+            font-family: 'Georgia', serif;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .tracking-section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 80vh;
+        }
+
+        .tracking-container {
+            text-align: center;
+            background: #fff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+            max-width: 450px;
+            width: 100%;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            color: #b7352b;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 1rem;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px;
+            font-size: 1rem;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            outline: none;
+        }
+
+        button {
+            background: linear-gradient(45deg, #b7352b, #e6a07c);
+            color: #fff;
+            border: none;
+            padding: 12px 20px;
+            font-size: 1rem;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+        }
+
+        button:hover {
+            background: linear-gradient(45deg, #e6a07c, #b7352b);
+            transform: scale(1.05);
+        }
+
+        .result {
+            margin-top: 20px;
+            background: #fff3cd;
+            color: #856404;
+            padding: 10px;
+            border: 1px solid #ffeeba;
+            border-radius: 6px;
+        }
+
+        .footer {
+            text-align: center;
+            background-color: #f8e3d9;
+            padding: 10px 0;
+            border-top: 2px solid #e6c4b4;
+        }
+
+        .footer p {
+            font-size: 0.9rem;
+            color: #555;
+        }
+    </style>
 </head>
 <body>
     <a href="index.html" class="back-home">Voltar para a Página Inicial</a>
-    <style>
-                        .back-home {
-    display: inline-block;
-    margin-top: 10px;
-    padding: 10px 20px;
-    background-color: #ff6347;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-    text-align: center;
-    transition: background-color 0.3s ease;
-}
-
-.back-home:hover {
-    background-color: #e5533d;
-}
- /* Reset básico */
-body, h1, h2, p, form, input, button {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Arial', sans-serif;
-    background-color: #fef9f5;
-    color: #333;
-}
-
-.header {
-    background-color: #f8e3d9;
-    text-align: center;
-    padding: 20px 0;
-    border-bottom: 2px solid #e6c4b4;
-}
-
-.header h1 {
-    font-size: 2.5rem;
-    color: #b7352b;
-    font-family: 'Georgia', serif;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.tracking-section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 80vh;
-}
-
-.tracking-container {
-    text-align: center;
-    background: #fff;
-    padding: 30px;
-    border-radius: 12px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-    max-width: 450px;
-    width: 100%;
-}
-
-h2 {
-    font-size: 1.8rem;
-    color: #b7352b;
-    margin-bottom: 10px;
-}
-
-p {
-    font-size: 1rem;
-    color: #555;
-    margin-bottom: 20px;
-}
-
-input {
-    width: 100%;
-    padding: 12px;
-    font-size: 1rem;
-    margin-bottom: 20px;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    outline: none;
-}
-
-button {
-    background: linear-gradient(45deg, #b7352b, #e6a07c);
-    color: #fff;
-    border: none;
-    padding: 12px 20px;
-    font-size: 1rem;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: all 0.3s ease-in-out;
-}
-
-button:hover {
-    background: linear-gradient(45deg, #e6a07c, #b7352b);
-    transform: scale(1.05);
-}
-
-.result {
-    margin-top: 20px;
-    background: #fff3cd;
-    color: #856404;
-    padding: 10px;
-    border: 1px solid #ffeeba;
-    border-radius: 6px;
-}
-
-.footer {
-    text-align: center;
-    background-color: #f8e3d9;
-    padding: 10px 0;
-    border-top: 2px solid #e6c4b4;
-}
-
-.footer p {
-    font-size: 0.9rem;
-    color: #555;
-}
-
-    </style>
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rastrear Pedido - Culinária Premium</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
     <header class="header">
         <h1>Culinária Premium</h1>
     </header>
     <main>
-        <section id="rastreio"  class="tracking-section">
+        <section id="rastreio" class="tracking-section">
             <div class="tracking-container">
                 <h2>Rastrear Pedido</h2>
                 <p>Digite o seu CPF (somente números), email ou número do pedido para rastrear:</p>
@@ -160,54 +150,38 @@ button:hover {
     <footer class="footer">
         <p>&copy; 2024 Culinária Premium. Todos os direitos reservados.</p>
     </footer>
-
     <script>
-        document.getElementById("searchButton").addEventListener("click", function() {
+        document.getElementById("searchButton").addEventListener("click", async function () {
             const input = document.getElementById("trackingInput").value.trim();
             const resultDiv = document.getElementById("result");
 
             if (input !== "") {
-                resultDiv.style.display = "block"; // Exibe a mensagem
+                try {
+                    const response = await fetch("https://SEU_BACKEND_URL_ON_RENDER/rastrear", {
+                        method: "POST",
+                        headers: {
+                            "Content-Type": "application/json"
+                        },
+                        body: JSON.stringify({ pedido: input })
+                    });
+
+                    const data = await response.json();
+
+                    if (data.sucesso) {
+                        resultDiv.style.display = "block";
+                        resultDiv.innerHTML = `<strong>Status:</strong> ${data.dados.status}<br><strong>Detalhes:</strong> ${data.dados.detalhes}`;
+                    } else {
+                        resultDiv.style.display = "block";
+                        resultDiv.innerHTML = data.mensagem;
+                    }
+                } catch (error) {
+                    resultDiv.style.display = "block";
+                    resultDiv.innerHTML = "Erro ao conectar ao servidor.";
+                }
             } else {
-                resultDiv.style.display = "none"; // Esconde a mensagem se o campo estiver vazio
+                resultDiv.style.display = "none";
             }
         });
-
-
-        document.getElementById("searchButton").addEventListener("click", async function () {
-    const input = document.getElementById("trackingInput").value.trim();
-    const resultDiv = document.getElementById("result");
-
-    if (input !== "") {
-        try {
-            const response = await fetch("http://localhost:3000/rastrear", {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json"
-                },
-                body: JSON.stringify({ pedido: input })
-            });
-
-            const data = await response.json();
-
-            if (data.sucesso) {
-                resultDiv.style.display = "block";
-                resultDiv.innerHTML = `<strong>Status:</strong> ${data.dados.status}<br><strong>Detalhes:</strong> ${data.dados.detalhes}`;
-            } else {
-                resultDiv.style.display = "block";
-                resultDiv.innerHTML = data.mensagem;
-            }
-        } catch (error) {
-            resultDiv.style.display = "block";
-            resultDiv.innerHTML = "Erro ao conectar ao servidor.";
-        }
-    } else {
-        resultDiv.style.display = "none";
-    }
-});
-
     </script>
 </body>
 </html>
-
-
