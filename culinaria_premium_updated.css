@@ -1746,6 +1746,85 @@ body {
     }
 }
 
+/* Ajuste geral */
+body {
+    font-size: 16px;
+    margin: 20px; /* Espaço ao redor do site */
+    padding: 0;
+    background-color: #fef9f5; /* Fundo agradável */
+    line-height: 1.6; /* Espaçamento entre linhas */
+}
+
+/* Container principal */
+.tracking-container {
+    padding: 50px; /* Mais espaço interno */
+    margin: 40px auto; /* Espaço ao redor do container */
+    max-width: 600px; /* Largura máxima */
+    width: 90%; /* Responsivo para telas menores */
+    background: white;
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Sombra leve */
+}
+
+/* Títulos */
+h2 {
+    font-size: 2rem; /* Tamanho maior do título */
+    margin-bottom: 20px; /* Espaço abaixo do título */
+    text-align: center; /* Centralizar texto */
+}
+
+/* Texto explicativo */
+p {
+    font-size: 1.2rem; /* Aumenta o tamanho do texto */
+    margin-bottom: 20px; /* Espaço abaixo */
+}
+
+/* Campos de entrada */
+input {
+    width: 100%; /* Ocupar toda a largura do container */
+    padding: 15px; /* Mais espaço interno */
+    margin-bottom: 20px; /* Espaço entre os campos */
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1.1rem;
+}
+
+/* Botão */
+button {
+    padding: 15px 30px;
+    font-size: 1.1rem;
+    background: linear-gradient(45deg, #b7352b, #e6a07c);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background: linear-gradient(45deg, #e6a07c, #b7352b);
+}
+
+/* Resultado */
+.result {
+    margin-top: 30px;
+    padding: 20px;
+    font-size: 1.1rem;
+    background: #fff3cd;
+    border: 1px solid #ffeeba;
+    border-radius: 5px;
+}
+
+/* Rodapé */
+.footer {
+    margin-top: 40px;
+    text-align: center;
+    font-size: 1rem;
+    color: #555;
+    padding: 20px;
+    background: #f8e3d9;
+    border-top: 2px solid #e6c4b4;
+}
 
 
 
